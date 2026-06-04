@@ -8,11 +8,12 @@
     <title>Week 4 - Contact form</title>
    </head>
 <body>
-    <header>
-        <h1>Contact Us!</h1>
-    </header>
-    <nav>
-     <!-- navigation is often orginaded in lists for easyer styling and organization -->
+       <header>
+          <h1>Contact Us!</h1>
+       </header>
+
+   <nav>
+       <!-- navigation is often organized in lists for easyer styling and organization -->
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -20,15 +21,79 @@
                 <!-- external pages need the full adress..
                 use _balnk to opne in a new tab -->
          <li><a href="https://imad.gitlab.io" target="_blank">More web stuff</a></li>
-        </ul>
-        
-    </nav>
+        </ul>  
+   </nav>
     <main>
+       <!-- html forms let users enter infomation intro your site. -->
+       <!-- from requir two attributes to tell them how to submit; actions tells the form where to go
+        (what page) method tells the form how to send the informarion the post method sends the 
+        informaation in a encrypted packge the get method sends the information
+        unencrypted in the browser URL -->
+      
+   <form action="contact.html" method="get">
+        <section>
+          <!-- to link the label to  with the input,use "for" on the 
+           label matching  the "id" on the input -->
+          <label for="name">Name:</label>
+          <input id="name" type="text"name="name" placeholder="Enter your name">
+
+          <!-- with input you can specify different types-->
+         <label for="email">Email:</label>
+         <input id="email" type="email"name="email" placeholder="Enter your email">
+       </section>
+        
+       <section>
+         <!-- the section are block elements,so these form elemnts-->
+         <label for="password">Password:</label>
+         <input id="password" type="password" name="password">
+          
+         <label for="when"> Birth Date:</label>
+         <input id="when" type="date"name="when">
+         <!-- for numbers you can specify a min and max value so user dont enter something
+           higher or lower than you want -->
+         <label for="how">How many?</label>
+         <input id="how" type="number" min="10" max="50" name="how" value="15">
+       </section>
+
+       <section>
+            <!-- to make a dropdown menu, use the select element, and add options inside it -->
        
-    </main>
-    <footer>
+            <label for="Colours">Colour?</label>
+            <select name="Colours" id="Colours">
+        
+            <option value="Blue"selected >Blue</option>
+            <option value="Red" selected>Red</option>
+            <option value="Green" selected>Green</option>
+            </select>
+  
+             <section> 
+           <!-- radio buttons opertae as aset ,check one.and the others uncheck-->
+         
+   
+            <label for="one">1</label>
+            <input type="radio" id="one" name="howmany " value="1">
+
+            <label for="two">2</label>
+            <input type="radio" id="two" name="howmany " value="2">
+
+            <label for="three">3</label>
+            <input type="radio" id="three" name="howmany " value="3">
+
+         </section>
+       </section>
+
+       <section>
+        <!-- to submit a form,add a submit button,this button will submit everthing containd
+         inside of one form tag-->
+          <!-- the value attribute displays text on the button -->
+       
+        <input type="submit" value="Submit The Form" name="submit">
+       </section>
+   </form>
+   </main>
+     <footer>
     
-    </footer>
+     </footer>
 
 </body>
 </html>
